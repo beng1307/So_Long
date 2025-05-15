@@ -35,7 +35,7 @@ char	**parse_map(t_mlx **game, char *file_name, int *error)
 	char	*line;
 	int		index;
 
-	map = ft_calloc(sizeof(char **), 1);
+	map = ft_calloc(sizeof(char **) * 32, 1);
 	if (!map)
 		return (perror("malloc"), NULL);
 	(*game)->file = open(file_name, O_RDONLY);
